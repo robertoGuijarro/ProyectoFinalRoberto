@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_camarero_comanda"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="comanda" />
+    <item
+        android:id="@+id/menu_camarero_comandas"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:enabled="true"
+        android:title="comandas" />
+    <item
+        android:id="@+id/menu_camarero_carta"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="carta" />
+    <item
+        android:id="@+id/menu_camarero_mesas"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:enabled="true"
+        android:title="mesas" />
+</menu>

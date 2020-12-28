@@ -1,0 +1,35 @@
+com/example/a1tutorial/activity/camarero/fragments/Fragmen_carta.java
+ com.example.a1tutorial.activity.camarero.fragments.Fragmen_carta
+com/example/a1tutorial/activity/HomeActivity.java
+ com.example.a1tutorial.activity.HomeActivity
+ com.example.a1tutorial.activity.HomeActivity$1
+ com.example.a1tutorial.activity.HomeActivity$2
+com/example/a1tutorial/adaptador/AdaptadorCartaComida.java
+ com.example.a1tutorial.adaptador.AdaptadorCartaComida
+ com.example.a1tutorial.adaptador.AdaptadorCartaComida$ViewHolderSuscesos
+com/example/a1tutorial/models/Carta.java
+ com.example.a1tutorial.models.Carta
+com/example/a1tutorial/providers/AuthProvider.java
+ com.example.a1tutorial.providers.AuthProvider
+com/example/a1tutorial/providers/UserDatabaseProvider.java
+ com.example.a1tutorial.providers.UserDatabaseProvider
+com/example/a1tutorial/activity/RegisterActivity.java
+ com.example.a1tutorial.activity.RegisterActivity
+ com.example.a1tutorial.activity.RegisterActivity$1
+ com.example.a1tutorial.activity.RegisterActivity$2
+com/example/a1tutorial/models/User.java
+ com.example.a1tutorial.models.User
+com/example/a1tutorial/providers/CartaComidaDatabaseProvider.java
+ com.example.a1tutorial.providers.CartaComidaDatabaseProvider
+com/example/a1tutorial/activity/camarero/fragment_camarero.java
+ com.example.a1tutorial.activity.camarero.fragment_camarero
+ com.example.a1tutorial.activity.camarero.fragment_camarero$1
+com/example/a1tutorial/BuildConfig.java
+ com.example.a1tutorial.BuildConfig
+com/example/a1tutorial/activity/AuthActivity.java
+ com.example.a1tutorial.activity.AuthActivity
+ com.example.a1tutorial.activity.AuthActivity$1
+ com.example.a1tutorial.activity.AuthActivity$2
+ com.example.a1tutorial.activity.AuthActivity$2$1
+ com.example.a1tutorial.activity.AuthActivity$3
+ com.example.a1tutorial.activity.AuthActivity$4

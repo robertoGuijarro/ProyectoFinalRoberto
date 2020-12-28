@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Restaurenta</string>
+    <string-array name="oficio">
+        <item>camarero</item>
+        <item>cocinero</item>
+        <item>barra</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

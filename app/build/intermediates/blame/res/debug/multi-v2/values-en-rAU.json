@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Paula\\Documents\\ProyectoAndroid\\Restaurante\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
+            "outputFile": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Paula\\.gradle\\caches\\transforms-2\\files-2.1\\f3664f05be93c14226c7139dd55d272c\\appcompat-1.2.0\\res\\values-en-rAU\\values-en-rAU.xml",

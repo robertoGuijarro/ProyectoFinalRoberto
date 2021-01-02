@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Paula\\Documents\\ProyectoAndroid\\Restaurante\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ka\\values-ka.xml",
+            "outputFile": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ka\\values-ka.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Paula\\.gradle\\caches\\transforms-2\\files-2.1\\79641130c121601b9d481cf4b162bc7a\\jetified-play-services-base-17.1.0\\res\\values-ka\\values.xml",

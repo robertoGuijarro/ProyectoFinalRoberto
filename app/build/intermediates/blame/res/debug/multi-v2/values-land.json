@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Paula\\Documents\\ProyectoAndroid\\Restaurante\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Paula\\.gradle\\caches\\transforms-2\\files-2.1\\521e3995ba13e55257dc5a84d6fb468b\\material-1.2.1\\res\\values-land\\values-land.xml",

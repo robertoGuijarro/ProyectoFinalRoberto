@@ -35,4 +35,8 @@ public class CartaComidaDatabaseProvider {
     public Task<DocumentSnapshot> getDocument(String document){
         return mColection.document(document).get();
     }
+
+    public CollectionReference getmColection() {
+        return mColection;
+    }
 }

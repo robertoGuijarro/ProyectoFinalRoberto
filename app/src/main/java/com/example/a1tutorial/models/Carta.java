@@ -10,6 +10,7 @@ public class Carta implements Serializable {
     String url;
     int stock;
     int unidades;
+    String estado;
 
     public Carta() {
     }
@@ -28,11 +29,14 @@ public class Carta implements Serializable {
         this.unidades = unidades;
     }
 //Comanda
-    public Carta(String idComida, String nombre, double precio, int unidades) {
+    public Carta(String idComida, String nombre, double precio, int unidades, int stock, String estado, String tipo) {
         this.idComida = idComida;
         this.nombre = nombre;
         this.precio = precio;
         this.unidades = unidades;
+        this.stock = stock;
+        this.estado = estado;
+        this.tipo = tipo;
     }
 
     public Carta(String idComida, int unidades) {
@@ -94,6 +98,15 @@ public class Carta implements Serializable {
     public String getIdComida() {
         return idComida;
     }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
     @Override
     public String toString() {
         return "Carta{" +

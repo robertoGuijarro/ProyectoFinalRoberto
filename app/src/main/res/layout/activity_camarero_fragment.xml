@@ -20,7 +20,7 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/botton_vavigation"
+            android:id="@+id/botton_vavigation_camarero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"

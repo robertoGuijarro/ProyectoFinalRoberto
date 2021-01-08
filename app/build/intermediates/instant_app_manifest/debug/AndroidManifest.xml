@@ -25,6 +25,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.a1tutorial.activity.camarero.Fragment_camarero" />
+        <activity android:name="com.example.a1tutorial.activity.cocinero.Fragment_cocinero" />
         <activity android:name="com.example.a1tutorial.activity.RegisterActivity" />
         <activity android:name="com.example.a1tutorial.activity.HomeActivity" />
         <activity android:name="com.example.a1tutorial.activity.AuthActivity" >

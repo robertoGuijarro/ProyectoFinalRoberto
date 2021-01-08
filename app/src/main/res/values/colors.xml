@@ -11,4 +11,8 @@
     <color name="green_normal">#044a42</color>
     <color name="green_light">#3a9188</color>
     <color name="green_light_2">#b8e1dd</color>
+
+    //color comandas
+    <color name="comandasEfectuadas">#67A9DA</color>
+    <color name="comandasPorHacer">#E7A83C</color>
 </resources>

@@ -20,15 +20,15 @@ public final class ActivityCamareroFragmentBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final BottomNavigationView bottonVavigation;
+  public final BottomNavigationView bottonVavigationCamarero;
 
   @NonNull
   public final FrameLayout frameContainer;
 
   private ActivityCamareroFragmentBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomNavigationView bottonVavigation, @NonNull FrameLayout frameContainer) {
+      @NonNull BottomNavigationView bottonVavigationCamarero, @NonNull FrameLayout frameContainer) {
     this.rootView = rootView;
-    this.bottonVavigation = bottonVavigation;
+    this.bottonVavigationCamarero = bottonVavigationCamarero;
     this.frameContainer = frameContainer;
   }
 
@@ -59,9 +59,9 @@ public final class ActivityCamareroFragmentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     String missingId;
     missingId: {
-      BottomNavigationView bottonVavigation = rootView.findViewById(R.id.botton_vavigation);
-      if (bottonVavigation == null) {
-        missingId = "bottonVavigation";
+      BottomNavigationView bottonVavigationCamarero = rootView.findViewById(R.id.botton_vavigation_camarero);
+      if (bottonVavigationCamarero == null) {
+        missingId = "bottonVavigationCamarero";
         break missingId;
       }
       FrameLayout frameContainer = rootView.findViewById(R.id.frame_container);
@@ -69,8 +69,8 @@ public final class ActivityCamareroFragmentBinding implements ViewBinding {
         missingId = "frameContainer";
         break missingId;
       }
-      return new ActivityCamareroFragmentBinding((CoordinatorLayout) rootView, bottonVavigation,
-          frameContainer);
+      return new ActivityCamareroFragmentBinding((CoordinatorLayout) rootView,
+          bottonVavigationCamarero, frameContainer);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

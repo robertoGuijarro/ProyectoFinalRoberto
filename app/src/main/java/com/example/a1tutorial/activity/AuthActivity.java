@@ -11,7 +11,9 @@ import android.widget.TextView;
 
 import com.example.a1tutorial.R;
 import com.example.a1tutorial.activity.camarero.Fragment_camarero;
+import com.example.a1tutorial.activity.cocinero.Fragment_cocinero;
 import com.example.a1tutorial.models.Carta;
+import com.example.a1tutorial.providers.UserDatabaseProvider;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -19,6 +21,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -30,6 +33,8 @@ import java.util.Map;
 public class AuthActivity extends AppCompatActivity {
 
     private FirebaseAuth mauth;
+
+    UserDatabaseProvider userDatabaseProvider;
     TextView txtEmail, txtpass;
     Button btnRegistrar, btnLogin;
 
@@ -39,6 +44,7 @@ public class AuthActivity extends AppCompatActivity {
         setContentView(R.layout.activity_auth);
 
         mauth = FirebaseAuth.getInstance();
+        userDatabaseProvider = new UserDatabaseProvider();
 
         txtEmail = findViewById(R.id.loginEmail);
         txtpass = findViewById(R.id.loginPassword);
@@ -63,24 +69,37 @@ public class AuthActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
 
-                            FirebaseUser user = mauth.getCurrentUser();
-                            System.out.println(user.getDisplayName());
-                            Intent intento = new Intent(AuthActivity.this, Fragment_camarero.class);
-                            startActivity(intento);
+                            userDatabaseProvider.getOficio(txtEmail.getText().toString()).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                @Override
+                                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                    for (QueryDocumentSnapshot document: queryDocumentSnapshots){
+                                        switch (document.getString("oficio")){
+                                            case "camarero":
+                                                System.out.println("Estoy en camarero"+document.getString("oficio"));
+
+                                                FirebaseUser userCamarero = mauth.getCurrentUser();
+                                                System.out.println(userCamarero.getDisplayName());
+                                                Intent intentoCamarero = new Intent(AuthActivity.this, Fragment_camarero.class);
+                                                startActivity(intentoCamarero);
+
+                                            case "cocinero":
+
+                                                System.out.println("Estoy en cocinero"+document.getString("oficio"));
+
+                                                FirebaseUser userCocinero = mauth.getCurrentUser();
+                                                System.out.println(userCocinero.getDisplayName());
+                                                Intent intentoCocinero = new Intent(AuthActivity.this, Fragment_cocinero.class);
+                                                startActivity(intentoCocinero);
+                                        }
+                                    }
+                                }
+                            });
                         }
                     }
                 });
             }
         });
 
-        FirebaseFirestore.getInstance().collection("Carta").document("Bebidas").collection("Tipos").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-            @Override
-            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                for(QueryDocumentSnapshot doccument:queryDocumentSnapshots){
-
-                }
-            }
-        });
 
     }
 
@@ -125,7 +144,7 @@ public class AuthActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (mauth.getCurrentUser()!=null){
-            startActivity(new Intent(this, Fragment_camarero.class));
+            //startActivity(new Intent(this, Fragment_camarero.class));
         }
     }
 

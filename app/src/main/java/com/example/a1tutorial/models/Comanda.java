@@ -1,18 +1,21 @@
 package com.example.a1tutorial.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Comanda {
+public class Comanda implements Serializable {
     String idCamarero;
+    String nameCamarero;
     int mesa;
     List<Carta> platos;
     double precioTotal;
     boolean servido;
 
     //Escribir comanda
-    public Comanda(String idCamarero, int mesa, List<Carta> platos, double precioTotal, boolean servido) {
+    public Comanda(String idCamarero, String nameCamarero, int mesa, List<Carta> platos, double precioTotal, boolean servido) {
         this.idCamarero = idCamarero;
+        this.nameCamarero = nameCamarero;
         this.mesa = mesa;
         this.platos = platos;
         this.precioTotal = precioTotal;
@@ -20,6 +23,14 @@ public class Comanda {
     }
 
     public Comanda() {
+    }
+
+    public String getNameCamarero() {
+        return nameCamarero;
+    }
+
+    public void setNameCamarero(String nameCamarero) {
+        this.nameCamarero = nameCamarero;
     }
 
     public String getIdCamarero() {

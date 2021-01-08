@@ -48,12 +48,28 @@
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_cocinero_comandas.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_cocinero_comandas.xml"
+    },
+    {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_my_button_rounded.xml.flat",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\drawable\\my_button_rounded.xml"
     },
     {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_cocinero_comandas_platos.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_cocinero_comandas_platos.xml"
+    },
+    {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_cocinero_fragment.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_cocinero_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\menu_botton_nav_cocinero.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\menu\\botton_nav_cocinero.xml"
     },
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_comanda_comida.xml.flat",
@@ -80,12 +96,36 @@
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_camarero_comandas.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_camarero_comandas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_keyboard_arrow_down_black_24dp.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\drawable-v24\\ic_keyboard_arrow_down_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_keyboard_arrow_up_black_24dp.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\drawable-v24\\ic_keyboard_arrow_up_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_cocinero_comandas.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_cocinero_comandas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_camarero_comandas.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_camarero_comandas.xml"
+    },
+    {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_boton_redondo.xml.flat",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\drawable\\boton_redondo.xml"
     },
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_carta.xml.flat",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_carta.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_camarero_comandas_platos.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_camarero_comandas_platos.xml"
     },
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",

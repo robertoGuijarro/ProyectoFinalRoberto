@@ -38,9 +38,10 @@ public class AdaptadorComandaComida extends FirestoreRecyclerAdapter<Carta, Adap
     protected void onBindViewHolder(@NonNull final AdaptadorComandaComida.ViewComandaComida holder, final int position, @NonNull final Carta model) {
         holder.txtNombre.setText(model.getNombre());
         holder.txtPrecio.setText(model.getPrecio()+"€");
+        holder.txtStock.setText(""+ model.getStock());
         String idDocument=getSnapshots().getSnapshot(position).getId();
 
-        myFoodSelected.add(new Carta(idDocument,model.getNombre(), model.getPrecio(),0));
+        myFoodSelected.add(new Carta(idDocument,model.getNombre(), model.getPrecio(),0, model.getStock(), "rojo", "comida"));
 
         holder.btnMas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,13 +79,14 @@ public class AdaptadorComandaComida extends FirestoreRecyclerAdapter<Carta, Adap
 
     public class ViewComandaComida extends RecyclerView.ViewHolder {
 
-        TextView txtNombre, txtPrecio, txtCantidad;
+        TextView txtNombre, txtPrecio, txtCantidad, txtStock;
         Button btnMas, btnMenos;
         public ViewComandaComida(View vista) {
             super(vista);
             txtPrecio = vista.findViewById(R.id.txt_item_comanda_precio);
             txtCantidad = vista.findViewById(R.id.txt_item_comanda_cantidad);
             txtNombre = vista.findViewById(R.id.txt_item_comanda_nombre);
+            txtStock = vista.findViewById(R.id.txt_item_comanda_stock);
             btnMenos=vista.findViewById(R.id.btn_item_comanda_menos);
             btnMas=vista.findViewById(R.id.btn_item_comanda_mas);
         }

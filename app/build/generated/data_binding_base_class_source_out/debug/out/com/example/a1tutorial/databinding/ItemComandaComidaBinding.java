@@ -34,15 +34,24 @@ public final class ItemComandaComidaBinding implements ViewBinding {
   @NonNull
   public final TextView txtItemComandaPrecio;
 
+  @NonNull
+  public final TextView txtItemComandaStock;
+
+  @NonNull
+  public final TextView txtItemComandaTexto;
+
   private ItemComandaComidaBinding(@NonNull CardView rootView, @NonNull Button btnItemComandaMas,
       @NonNull Button btnItemComandaMenos, @NonNull TextView txtItemComandaCantidad,
-      @NonNull TextView txtItemComandaNombre, @NonNull TextView txtItemComandaPrecio) {
+      @NonNull TextView txtItemComandaNombre, @NonNull TextView txtItemComandaPrecio,
+      @NonNull TextView txtItemComandaStock, @NonNull TextView txtItemComandaTexto) {
     this.rootView = rootView;
     this.btnItemComandaMas = btnItemComandaMas;
     this.btnItemComandaMenos = btnItemComandaMenos;
     this.txtItemComandaCantidad = txtItemComandaCantidad;
     this.txtItemComandaNombre = txtItemComandaNombre;
     this.txtItemComandaPrecio = txtItemComandaPrecio;
+    this.txtItemComandaStock = txtItemComandaStock;
+    this.txtItemComandaTexto = txtItemComandaTexto;
   }
 
   @Override
@@ -97,8 +106,19 @@ public final class ItemComandaComidaBinding implements ViewBinding {
         missingId = "txtItemComandaPrecio";
         break missingId;
       }
+      TextView txtItemComandaStock = rootView.findViewById(R.id.txt_item_comanda_stock);
+      if (txtItemComandaStock == null) {
+        missingId = "txtItemComandaStock";
+        break missingId;
+      }
+      TextView txtItemComandaTexto = rootView.findViewById(R.id.txt_item_comanda_texto);
+      if (txtItemComandaTexto == null) {
+        missingId = "txtItemComandaTexto";
+        break missingId;
+      }
       return new ItemComandaComidaBinding((CardView) rootView, btnItemComandaMas,
-          btnItemComandaMenos, txtItemComandaCantidad, txtItemComandaNombre, txtItemComandaPrecio);
+          btnItemComandaMenos, txtItemComandaCantidad, txtItemComandaNombre, txtItemComandaPrecio,
+          txtItemComandaStock, txtItemComandaTexto);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

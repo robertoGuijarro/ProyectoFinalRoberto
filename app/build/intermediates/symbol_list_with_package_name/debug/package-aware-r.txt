@@ -1733,7 +1733,6 @@ id btn_comanda_crear
 id btn_comanda_entrante
 id btn_comanda_pescados
 id btn_comanda_postre
-id btn_item_cocinero_platos
 id btn_item_comanda_mas
 id btn_item_comanda_menos
 id btn_item_comandas_desplegar
@@ -1743,7 +1742,6 @@ id cache_measures
 id cancel_action
 id cancel_button
 id cardView_item_camarero_comandas
-id cardView_item_cocinero_comandas
 id center
 id center_horizontal
 id center_vertical
@@ -1767,7 +1765,6 @@ id content
 id contentPanel
 id coordinator
 id coordinator_item_camarero_comandas_desplegable
-id coordinator_item_cocinero_comandas
 id cos
 id custom
 id customPanel
@@ -1862,9 +1859,7 @@ id listMode
 id list_item
 id listadoCamareroComandas
 id listadoCamareroComandasDesplegable
-id listadoCocineroComandasDesplegable
 id listado_carta_comanda
-id listado_comandas_cocinero
 id listadorCartaComida
 id loginButton
 id loginEmail
@@ -2024,7 +2019,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView2
-id textView3
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -2061,10 +2055,6 @@ id txt_item_camarero_comandas_cantidad
 id txt_item_camarero_comandas_mesa
 id txt_item_camarero_comandas_nombreCamarero
 id txt_item_camarero_comandas_nombrePlato
-id txt_item_cocinero_comandas_cantidad
-id txt_item_cocinero_comandas_mesa
-id txt_item_cocinero_comandas_nombreCamarero
-id txt_item_cocinero_comandas_nombrePlato
 id txt_item_comanda_cantidad
 id txt_item_comanda_nombre
 id txt_item_comanda_precio
@@ -2149,7 +2139,6 @@ layout activity_camarero_carta
 layout activity_camarero_comanda
 layout activity_camarero_comandas
 layout activity_camarero_fragment
-layout activity_cocinero_comandas
 layout activity_cocinero_fragment
 layout activity_home
 layout activity_register
@@ -2172,8 +2161,6 @@ layout design_text_input_start_icon
 layout item_camarero_comandas
 layout item_camarero_comandas_platos
 layout item_carta
-layout item_cocinero_comandas
-layout item_cocinero_comandas_platos
 layout item_comanda_comida
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions

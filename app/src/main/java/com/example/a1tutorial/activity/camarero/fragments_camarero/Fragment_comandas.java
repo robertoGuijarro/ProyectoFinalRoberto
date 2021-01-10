@@ -1,4 +1,4 @@
-package com.example.a1tutorial.activity.camarero.fragments;
+package com.example.a1tutorial.activity.camarero.fragments_camarero;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

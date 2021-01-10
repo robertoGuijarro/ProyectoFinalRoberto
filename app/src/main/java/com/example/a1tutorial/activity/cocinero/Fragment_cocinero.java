@@ -9,9 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.a1tutorial.R;
-import com.example.a1tutorial.activity.camarero.fragments.Fragmen_carta;
-import com.example.a1tutorial.activity.camarero.fragments.Fragment_comanda;
-import com.example.a1tutorial.activity.camarero.fragments.Fragment_comandas;
+import com.example.a1tutorial.activity.camarero.fragments_camarero.Fragment_comandas;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Fragment_cocinero extends AppCompatActivity {

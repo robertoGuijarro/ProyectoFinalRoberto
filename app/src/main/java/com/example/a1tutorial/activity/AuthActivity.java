@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.a1tutorial.R;
 import com.example.a1tutorial.activity.camarero.Fragment_camarero;
@@ -35,6 +36,7 @@ public class AuthActivity extends AppCompatActivity {
     private FirebaseAuth mauth;
 
     UserDatabaseProvider userDatabaseProvider;
+
     TextView txtEmail, txtpass;
     Button btnRegistrar, btnLogin;
 
@@ -66,30 +68,26 @@ public class AuthActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mauth.signInWithEmailAndPassword(txtEmail.getText().toString(), txtpass.getText().toString()).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                    public void onComplete(@NonNull final Task<AuthResult> task) {
                         if (task.isSuccessful()){
 
                             userDatabaseProvider.getOficio(txtEmail.getText().toString()).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                                 @Override
                                 public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                                    for (QueryDocumentSnapshot document: queryDocumentSnapshots){
-                                        switch (document.getString("oficio")){
-                                            case "camarero":
-                                                System.out.println("Estoy en camarero"+document.getString("oficio"));
+                                    for (QueryDocumentSnapshot document : queryDocumentSnapshots){
+                                        System.out.println("Emails"+document.get("oficio"));
 
-                                                FirebaseUser userCamarero = mauth.getCurrentUser();
-                                                System.out.println(userCamarero.getDisplayName());
-                                                Intent intentoCamarero = new Intent(AuthActivity.this, Fragment_camarero.class);
-                                                startActivity(intentoCamarero);
+                                        if ("camarero".equals(document.getString("oficio"))){
+                                            FirebaseUser userCamarero = mauth.getCurrentUser();
+                                            System.out.println(userCamarero.getDisplayName());
+                                            Intent intentoCamarero = new Intent(AuthActivity.this, Fragment_camarero.class);
+                                            startActivity(intentoCamarero);
+                                        }
 
-                                            case "cocinero":
-
-                                                System.out.println("Estoy en cocinero"+document.getString("oficio"));
-
-                                                FirebaseUser userCocinero = mauth.getCurrentUser();
-                                                System.out.println(userCocinero.getDisplayName());
-                                                Intent intentoCocinero = new Intent(AuthActivity.this, Fragment_cocinero.class);
-                                                startActivity(intentoCocinero);
+                                        if ("cocinero".equals(document.getString("oficio"))){
+                                            FirebaseUser userCocinero = mauth.getCurrentUser();
+                                            Intent intentoCocinero = new Intent(AuthActivity.this, Fragment_cocinero.class);
+                                            startActivity(intentoCocinero);
                                         }
                                     }
                                 }

@@ -9,12 +9,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.a1tutorial.R;
-import com.example.a1tutorial.activity.camarero.fragments_camarero.Fragment_comandas;
+import com.example.a1tutorial.activity.cocinero.Fragments_cocinero.Fragment_cocinero_comandas;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Fragment_cocinero extends AppCompatActivity {
 
-    Fragment_comandas comandasFragment = new Fragment_comandas();
+Fragment_cocinero_comandas comandasFragment = new Fragment_cocinero_comandas();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

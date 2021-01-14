@@ -2,6 +2,7 @@ package com.example.a1tutorial.providers;
 
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.Query;
@@ -29,8 +30,16 @@ public class ComandaDatabasePorvider {
         return mColection.document(document).collection("platos");
     }
 
+    public Query getComandaPlatosCocinero(String document){
+        return mColection.document(document).collection("platos").whereEqualTo("estado", "rojo");
+    }
+
     public Query getComandasSinCocinar(){
-        return mColection.whereEqualTo("servido", "false");
+        return mColection.whereEqualTo("servido", false);
+    }
+
+    public DocumentReference updatePlatoCocinero(String documentoComanda, String documentPlato){
+        return mColection.document(documentoComanda).collection("platos").document(documentPlato);
     }
 }
  

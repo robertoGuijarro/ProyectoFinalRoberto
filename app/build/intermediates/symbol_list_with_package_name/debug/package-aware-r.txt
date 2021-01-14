@@ -1733,6 +1733,7 @@ id btn_comanda_crear
 id btn_comanda_entrante
 id btn_comanda_pescados
 id btn_comanda_postre
+id btn_item_cocinero_cocinarPlato
 id btn_item_comanda_mas
 id btn_item_comanda_menos
 id btn_item_comandas_desplegar
@@ -1742,6 +1743,7 @@ id cache_measures
 id cancel_action
 id cancel_button
 id cardView_item_camarero_comandas
+id cardView_item_cocinero_comandas
 id center
 id center_horizontal
 id center_vertical
@@ -1843,6 +1845,7 @@ id italic
 id item_carta_nombre
 id item_carta_precio
 id item_carta_tipo
+id item_listadoCocineroComandas
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -1859,6 +1862,7 @@ id listMode
 id list_item
 id listadoCamareroComandas
 id listadoCamareroComandasDesplegable
+id listadoCocineroComandas
 id listado_carta_comanda
 id listadorCartaComida
 id loginButton
@@ -2055,6 +2059,10 @@ id txt_item_camarero_comandas_cantidad
 id txt_item_camarero_comandas_mesa
 id txt_item_camarero_comandas_nombreCamarero
 id txt_item_camarero_comandas_nombrePlato
+id txt_item_cocinero_comandas_cantidad
+id txt_item_cocinero_comandas_nombrePlato
+id txt_item_cocinero_nombreCamarero
+id txt_item_cocinero_numeroMesa
 id txt_item_comanda_cantidad
 id txt_item_comanda_nombre
 id txt_item_comanda_precio
@@ -2139,6 +2147,7 @@ layout activity_camarero_carta
 layout activity_camarero_comanda
 layout activity_camarero_comandas
 layout activity_camarero_fragment
+layout activity_cocinero_comandas
 layout activity_cocinero_fragment
 layout activity_home
 layout activity_register
@@ -2161,6 +2170,8 @@ layout design_text_input_start_icon
 layout item_camarero_comandas
 layout item_camarero_comandas_platos
 layout item_carta
+layout item_cocinero_comandas
+layout item_cocinero_comandas_platos
 layout item_comanda_comida
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions

@@ -19,10 +19,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.a1tutorial.R;
+import com.example.a1tutorial.adaptador.AdaptadorCamareroComandaBebidas;
 import com.example.a1tutorial.adaptador.AdaptadorComandaComida;
+import com.example.a1tutorial.models.Bebidas;
 import com.example.a1tutorial.models.Carta;
 import com.example.a1tutorial.models.Comanda;
 import com.example.a1tutorial.providers.AuthProvider;
+import com.example.a1tutorial.providers.CartaBebidasDatabaseProvider;
 import com.example.a1tutorial.providers.CartaComidaDatabaseProvider;
 import com.example.a1tutorial.providers.ComandaDatabasePorvider;
 import com.example.a1tutorial.providers.UserDatabaseProvider;
@@ -35,6 +38,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -47,11 +51,13 @@ public class Fragment_comanda extends Fragment implements View.OnClickListener, 
     CartaComidaDatabaseProvider cartaDatabase;
     ComandaDatabasePorvider comandaDatabase;
     UserDatabaseProvider userDatabase;
+    CartaBebidasDatabaseProvider cartaBebidasDatabaseProvider;
 
     RecyclerView listadoCartaComida;
-    Button btnCarne, btnPescado, btnCocidos, btnEntrantes, btnPostre, btnAñadir;
+    Button btnAñadir, btnComidas, btnBebidas;
     TextView txtNumeroMesa;
     private AdaptadorComandaComida adaptadorComandaComida;
+    private AdaptadorCamareroComandaBebidas adaptadorCamareroComandaBebidas;
 
     AuthProvider auth;
 
@@ -59,7 +65,10 @@ public class Fragment_comanda extends Fragment implements View.OnClickListener, 
     String documentoMesaUsandose;
 
     List<Carta> listaPlatos= null;
+    List<Bebidas> listaBebidas = null;
     String nameCamarero = "";
+
+    boolean cargadoComida=true;
     public Fragment_comanda(){
 
     }
@@ -72,6 +81,7 @@ public class Fragment_comanda extends Fragment implements View.OnClickListener, 
         comandaDatabase = new ComandaDatabasePorvider();
         userDatabase = new UserDatabaseProvider();
         auth = new AuthProvider();
+        cartaBebidasDatabaseProvider = new CartaBebidasDatabaseProvider();
 
         listadoCartaComida = mView.findViewById(R.id.listado_carta_comanda);
         listadoCartaComida.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -79,19 +89,14 @@ public class Fragment_comanda extends Fragment implements View.OnClickListener, 
         txtNumeroMesa = mView.findViewById(R.id.txt_comanda_mesas);
         txtNumeroMesa.addTextChangedListener(this);
 
-        btnCarne = mView.findViewById(R.id.btn_comanda_carne);
-        btnCarne.setOnClickListener(this);
-        btnPescado = mView.findViewById(R.id.btn_comanda_pescados);
-        btnPescado.setOnClickListener(this);
-        btnCocidos = mView.findViewById(R.id.btn_comanda_cocidos);
-        btnCocidos.setOnClickListener(this);
-        btnEntrantes = mView.findViewById(R.id.btn_comanda_entrante);
-        btnEntrantes.setOnClickListener(this);
-        btnPostre = mView.findViewById(R.id.btn_comanda_postre);
-        btnPostre.setOnClickListener(this);
         btnAñadir = mView.findViewById(R.id.btn_comanda_crear);
         btnAñadir.setOnClickListener(this);
 
+        btnBebidas = mView.findViewById(R.id.btn_camarero_comandas_bebidas);
+        btnBebidas.setOnClickListener(this);
+
+        btnComidas = mView.findViewById(R.id.btn_camarero_comanda_comidas);
+        btnComidas.setOnClickListener(this);
         cargarCardView(cartaDatabase.getAll());
         sacarNameCamarero();
 
@@ -102,38 +107,144 @@ public class Fragment_comanda extends Fragment implements View.OnClickListener, 
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == btnCarne.getId()){
-            cargarCardView(cartaDatabase.getCarne());
+
+        if (v.getId() == btnComidas.getId()){
+            cargadoComida= true;
+            cargarCardView(cartaDatabase.getAll());
         }
-        if (v.getId() == btnCocidos.getId()){
-            cargarCardView(cartaDatabase.getCocidos());
-        }
-        if (v.getId() == btnEntrantes.getId()){
-            cargarCardView(cartaDatabase.getEntrantes());
-        }
-        if (v.getId() == btnPescado.getId()){
-            cargarCardView(cartaDatabase.getPescado());
-        }
-        if (v.getId() == btnPostre.getId()) {
-            cargarCardView(cartaDatabase.getPostre());
+
+        if (v.getId()== btnBebidas.getId()){
+            cargadoComida = false;
+            cargarCardViewBebidas(cartaBebidasDatabaseProvider.getAll());
         }
         if (v.getId() == btnAñadir.getId()) {
-            System.out.println("entraa");
-            double precioTotal = 0;
-            listaPlatos = new ArrayList<>();
-            for (Carta i : adaptadorComandaComida.getMyFoodSelected()) {
-                if (i.getUnidades()!=0){
-                    Carta plato = new Carta(i.getIdComida(), i.getNombre(), i.getPrecio(), i.getUnidades(), i.getStock(),i.getEstado(), i.getTipo());
-                    listaPlatos.add(plato);
-                    precioTotal = precioTotal + plato.getUnidades()*plato.getPrecio();
+            //if para añador bebida o comida
+            if (cargadoComida){
+                double precioTotal = 0;
+                listaPlatos = new ArrayList<>();
+                for (Carta i : adaptadorComandaComida.getMyFoodSelected()) {
+                    if (i.getUnidades()!=0){
+                        Carta plato = new Carta(i.getIdComida(), i.getNombre(), i.getPrecio(), i.getUnidades(), i.getStock(),i.getEstado(), i.getTipo());
+                        listaPlatos.add(plato);
+                        precioTotal = precioTotal + plato.getUnidades()*plato.getPrecio();
+                    }
                 }
+                DecimalFormat format = new DecimalFormat("#.00");
+                format.format(precioTotal);
+                añadirComanda(listaPlatos, precioTotal, documentoMesaUsandose);
+            }else{
+                double precioTotal=0;
+                listaBebidas = new ArrayList<>();
+                for (Bebidas i: adaptadorCamareroComandaBebidas.getMydrinksSelected()){
+                    if(i.getUnidades()!=0){
+                        Bebidas bebida = new Bebidas(i.getIdBebidas(), i.getNombre(), i.getPrecio(), i.getUrl(), i.getStock(),i.getUnidades(), i.getEstado(), i.isAlcoholicas());
+                        listaBebidas.add(bebida);
+                        precioTotal = precioTotal + bebida.getUnidades()*bebida.getPrecio();
+                    }
+                }
+
+                DecimalFormat format = new DecimalFormat("#.00");
+                format.format(precioTotal);
+
+                añadirComandaBebidas(listaBebidas, precioTotal, documentoMesaUsandose);
             }
-            añadirComanda(listaPlatos, precioTotal);
+        }
+    }
+
+    private void añadirComandaBebidas(List<Bebidas> listaBebidas, final double precioTotal, final String documentoMesaUsandoseAux) {
+
+        if (!mesaUsandose){
+            int mesa = Integer.parseInt(txtNumeroMesa.getText().toString());
+
+            actualizarStockBebidas(listaBebidas);
+
+            String idCamarero = auth.idAuth();
+
+            Comanda comandaCrear = new Comanda(idCamarero, nameCamarero, precioTotal, mesa, listaBebidas, false);
+
+            Map<String, Object> comanda = new HashMap<>();
+            comanda.put("idCamarero", comandaCrear.getIdCamarero());
+            comanda.put("nameCamarero", nameCamarero);
+            comanda.put("mesa", comandaCrear.getMesa());
+            comanda.put("precio", comandaCrear.getPrecioTotal());
+            comanda.put("servido", comandaCrear.isServido());
+
+            DocumentReference documento = comandaDatabase.getmColection().document();
+
+            documento.set(comanda).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+
+                }
+            });
+
+            for(Bebidas bebida: listaBebidas){
+                comandaDatabase.getmColection().document(documento.getId()).collection("bebidas").document().set(bebida).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+
+                    }
+                });
+            }
+
+            mesaUsandose = true;
+
+        }else{
+            Toast.makeText(getContext(), "La mesa ya esta en uso", Toast.LENGTH_LONG).show();
+
+            actualizarStockBebidas(listaBebidas);
+
+            comandaDatabase.getmColection().document(documentoMesaUsandoseAux).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    double precioActual = documentSnapshot.getDouble("precio");
+
+                    double precioActualizado = precioActual+precioTotal;
+
+                    DecimalFormat format = new DecimalFormat("#.00");
+                    format.format(precioActualizado);
+
+                    comandaDatabase.getmColection().document(documentoMesaUsandoseAux).update("precio", precioActualizado).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+
+                        }
+                    });
+
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    System.out.println(e);
+                }
+            });
+
+            for (Bebidas bebida: listaBebidas){
+                comandaDatabase.getmColection().document(documentoMesaUsandose).collection("bebidas").document().set(bebida).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        System.out.println("fallo platos");
+                    }
+                });
+            }
+        }
+    }
+
+    private void actualizarStockBebidas(List<Bebidas> listaBebidass) {
+        for (final Bebidas bebida: listaBebidass){
+            int stockActual = bebida.getStock()-bebida.getUnidades();
+            cartaBebidasDatabaseProvider.getmColection().document(bebida.getIdBebidas()).update("stock", stockActual).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+
+                }
+            });
+            refrescarFragment();
         }
     }
 
 
-    private void añadirComanda(final List<Carta> listaPlatos, double precioTotal) {
+    private void añadirComanda(final List<Carta> listaPlatos, final double precioTotal, final String documentoMesaUsandoseAux) {
 
         if (!mesaUsandose){
             int mesa = Integer.parseInt(txtNumeroMesa.getText().toString());
@@ -172,6 +283,31 @@ public class Fragment_comanda extends Fragment implements View.OnClickListener, 
 
             actualizarStock(listaPlatos);
 
+            comandaDatabase.getmColection().document(documentoMesaUsandose).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    double precioActual = documentSnapshot.getDouble("precio");
+
+                    double precioActualizado = precioActual+precioTotal;
+
+                    DecimalFormat format = new DecimalFormat("#.00");
+                    format.format(precioActualizado);
+
+                    comandaDatabase.getmColection().document(documentoMesaUsandoseAux).update("precio", precioActualizado).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+
+                        }
+                    });
+
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    System.out.println(e);
+                }
+            });
+
             for (Carta platos: listaPlatos){
                 comandaDatabase.getmColection().document(documentoMesaUsandose).collection("platos").document().set(platos).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -203,6 +339,13 @@ public class Fragment_comanda extends Fragment implements View.OnClickListener, 
             ft.setReorderingAllowed(false);
         }
         ft.detach(this).attach(this).commit();
+    }
+
+    private void cargarCardViewBebidas(Query query) {
+        FirestoreRecyclerOptions<Bebidas> options = new FirestoreRecyclerOptions.Builder<Bebidas>().setQuery(query, Bebidas.class).build();
+        adaptadorCamareroComandaBebidas = new AdaptadorCamareroComandaBebidas(options);
+        listadoCartaComida.setAdapter(adaptadorCamareroComandaBebidas);
+        adaptadorCamareroComandaBebidas.startListening();
     }
 
     private void cargarCardView(Query query) {

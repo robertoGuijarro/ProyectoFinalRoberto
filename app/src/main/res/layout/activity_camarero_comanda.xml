@@ -67,49 +67,23 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_comanda_carne"
+                    android:id="@+id/btn_camarero_comanda_comidas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Carne"
-                    android:textSize="10sp" />
+                    android:text="Comidas" />
 
                 <Button
-                    android:id="@+id/btn_comanda_pescados"
+                    android:id="@+id/btn_camarero_comandas_bebidas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Pescado"
-                    android:textSize="10sp" />
-
-                <Button
-                    android:id="@+id/btn_comanda_cocidos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Cocidos"
-                    android:textSize="10sp" />
-
-                <Button
-                    android:id="@+id/btn_comanda_entrante"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Entrant"
-                    android:textSize="10sp"/>
-
-                <Button
-                    android:id="@+id/btn_comanda_postre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Postre"
-                    android:textSize="10sp" />
+                    android:text="Bebidas" />
             </LinearLayout>
 
         </LinearLayout>

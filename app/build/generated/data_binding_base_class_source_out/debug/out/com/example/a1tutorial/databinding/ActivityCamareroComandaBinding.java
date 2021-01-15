@@ -23,22 +23,13 @@ public final class ActivityCamareroComandaBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final Button btnComandaCarne;
+  public final Button btnCamareroComandaComidas;
 
   @NonNull
-  public final Button btnComandaCocidos;
+  public final Button btnCamareroComandasBebidas;
 
   @NonNull
   public final Button btnComandaCrear;
-
-  @NonNull
-  public final Button btnComandaEntrante;
-
-  @NonNull
-  public final Button btnComandaPescados;
-
-  @NonNull
-  public final Button btnComandaPostre;
 
   @NonNull
   public final LinearLayout linearLayout;
@@ -53,18 +44,14 @@ public final class ActivityCamareroComandaBinding implements ViewBinding {
   public final EditText txtComandaMesas;
 
   private ActivityCamareroComandaBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull Button btnComandaCarne, @NonNull Button btnComandaCocidos,
-      @NonNull Button btnComandaCrear, @NonNull Button btnComandaEntrante,
-      @NonNull Button btnComandaPescados, @NonNull Button btnComandaPostre,
-      @NonNull LinearLayout linearLayout, @NonNull RecyclerView listadoCartaComanda,
-      @NonNull TextView textView2, @NonNull EditText txtComandaMesas) {
+      @NonNull Button btnCamareroComandaComidas, @NonNull Button btnCamareroComandasBebidas,
+      @NonNull Button btnComandaCrear, @NonNull LinearLayout linearLayout,
+      @NonNull RecyclerView listadoCartaComanda, @NonNull TextView textView2,
+      @NonNull EditText txtComandaMesas) {
     this.rootView = rootView;
-    this.btnComandaCarne = btnComandaCarne;
-    this.btnComandaCocidos = btnComandaCocidos;
+    this.btnCamareroComandaComidas = btnCamareroComandaComidas;
+    this.btnCamareroComandasBebidas = btnCamareroComandasBebidas;
     this.btnComandaCrear = btnComandaCrear;
-    this.btnComandaEntrante = btnComandaEntrante;
-    this.btnComandaPescados = btnComandaPescados;
-    this.btnComandaPostre = btnComandaPostre;
     this.linearLayout = linearLayout;
     this.listadoCartaComanda = listadoCartaComanda;
     this.textView2 = textView2;
@@ -98,34 +85,19 @@ public final class ActivityCamareroComandaBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     String missingId;
     missingId: {
-      Button btnComandaCarne = rootView.findViewById(R.id.btn_comanda_carne);
-      if (btnComandaCarne == null) {
-        missingId = "btnComandaCarne";
+      Button btnCamareroComandaComidas = rootView.findViewById(R.id.btn_camarero_comanda_comidas);
+      if (btnCamareroComandaComidas == null) {
+        missingId = "btnCamareroComandaComidas";
         break missingId;
       }
-      Button btnComandaCocidos = rootView.findViewById(R.id.btn_comanda_cocidos);
-      if (btnComandaCocidos == null) {
-        missingId = "btnComandaCocidos";
+      Button btnCamareroComandasBebidas = rootView.findViewById(R.id.btn_camarero_comandas_bebidas);
+      if (btnCamareroComandasBebidas == null) {
+        missingId = "btnCamareroComandasBebidas";
         break missingId;
       }
       Button btnComandaCrear = rootView.findViewById(R.id.btn_comanda_crear);
       if (btnComandaCrear == null) {
         missingId = "btnComandaCrear";
-        break missingId;
-      }
-      Button btnComandaEntrante = rootView.findViewById(R.id.btn_comanda_entrante);
-      if (btnComandaEntrante == null) {
-        missingId = "btnComandaEntrante";
-        break missingId;
-      }
-      Button btnComandaPescados = rootView.findViewById(R.id.btn_comanda_pescados);
-      if (btnComandaPescados == null) {
-        missingId = "btnComandaPescados";
-        break missingId;
-      }
-      Button btnComandaPostre = rootView.findViewById(R.id.btn_comanda_postre);
-      if (btnComandaPostre == null) {
-        missingId = "btnComandaPostre";
         break missingId;
       }
       LinearLayout linearLayout = rootView.findViewById(R.id.linearLayout);
@@ -148,9 +120,9 @@ public final class ActivityCamareroComandaBinding implements ViewBinding {
         missingId = "txtComandaMesas";
         break missingId;
       }
-      return new ActivityCamareroComandaBinding((CoordinatorLayout) rootView, btnComandaCarne,
-          btnComandaCocidos, btnComandaCrear, btnComandaEntrante, btnComandaPescados,
-          btnComandaPostre, linearLayout, listadoCartaComanda, textView2, txtComandaMesas);
+      return new ActivityCamareroComandaBinding((CoordinatorLayout) rootView,
+          btnCamareroComandaComidas, btnCamareroComandasBebidas, btnComandaCrear, linearLayout,
+          listadoCartaComanda, textView2, txtComandaMesas);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

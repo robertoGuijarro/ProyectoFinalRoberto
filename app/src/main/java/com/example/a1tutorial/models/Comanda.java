@@ -9,10 +9,20 @@ public class Comanda implements Serializable {
     String nameCamarero;
     int mesa;
     List<Carta> platos;
+    List<Bebidas> bebidas;
     double precioTotal;
     boolean servido;
 
-    //Escribir comanda
+    public Comanda(String idCamarero, String nameCamarero,  double precioTotal, int mesa, List<Bebidas> bebidas, boolean servido) {
+        this.idCamarero = idCamarero;
+        this.nameCamarero = nameCamarero;
+        this.mesa = mesa;
+        this.bebidas = bebidas;
+        this.precioTotal = precioTotal;
+        this.servido = servido;
+    }
+
+    //Escribir comanda comida
     public Comanda(String idCamarero, String nameCamarero, int mesa, List<Carta> platos, double precioTotal, boolean servido) {
         this.idCamarero = idCamarero;
         this.nameCamarero = nameCamarero;

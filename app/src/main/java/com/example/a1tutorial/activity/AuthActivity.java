@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.a1tutorial.R;
 import com.example.a1tutorial.activity.camarero.Fragment_camarero;
 import com.example.a1tutorial.activity.cocinero.Fragment_cocinero;
+import com.example.a1tutorial.models.Bebidas;
 import com.example.a1tutorial.models.Carta;
 import com.example.a1tutorial.providers.UserDatabaseProvider;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -141,7 +142,31 @@ public class AuthActivity extends AppCompatActivity {
             });
         }
 
+        ArrayList<Bebidas> listaBebidas = new ArrayList<>();
+        listaBebidas.add(new Bebidas("Cocacola", 1.5,"",40, false));
+        listaBebidas.add(new Bebidas("Agua", 1,"",20, false));
+        listaBebidas.add(new Bebidas("Fanta de Limon", 1.5,"",30, false));
+        listaBebidas.add(new Bebidas("caña", 1.8,"",20, true));
+        listaBebidas.add(new Bebidas("jarra", 3,"",400, true));
+        listaBebidas.add(new Bebidas("Ron cocacola", 7,"",40, true));
+        listaBebidas.add(new Bebidas("Fanta de naranja", 1.5,"",40, false));
 
+
+        for (Bebidas bebida:listaBebidas){
+            Map<String, Object> bebidas = new HashMap<>();
+            bebidas.put("nombre", bebida.getNombre());
+            bebidas.put("precio", bebida.getPrecio());
+            bebidas.put("alcoholicas", bebida.isAlcoholicas());
+            bebidas.put("url", bebida.getUrl());
+            bebidas.put("stock", bebida.getStock());
+
+            FirebaseFirestore.getInstance().collection("CartaBebidas").add(bebidas).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                @Override
+                public void onSuccess(DocumentReference documentReference) {
+
+                }
+            });
+        }
     }
 
 

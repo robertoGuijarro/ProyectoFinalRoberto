@@ -1875,6 +1875,7 @@ id menu_camarero_carta
 id menu_camarero_comanda
 id menu_camarero_comandas
 id menu_camarero_mesas
+id menu_cerrarSesion
 id menu_cocinero_comandas
 id message
 id middle
@@ -2236,6 +2237,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu botton_nav_camarero
 menu botton_nav_cocinero
+menu menu_cerrar_sesion
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

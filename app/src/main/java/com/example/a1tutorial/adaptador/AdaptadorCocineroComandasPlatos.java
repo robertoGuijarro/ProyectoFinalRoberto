@@ -47,12 +47,12 @@ public class AdaptadorCocineroComandasPlatos extends FirestoreRecyclerAdapter<Ca
         holder.btnEntregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               comandaDatabasePorvider.updatePlatoCocinero(documentoComanda, idDocument).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                    @Override
-                    public void onSuccess(DocumentSnapshot documentSnapshot) {
-                        System.out.println("HHHHHHHHHHHHHHHOOOOOOOOOOOOOLLLLLLLLLLLLLAAAAAAAAA"+ documentSnapshot.getString("nombre"));
-                    }
-                });
+               comandaDatabasePorvider.updatePlatoCocinero(documentoComanda, idDocument).update("estado", "naranja").addOnSuccessListener(new OnSuccessListener<Void>() {
+                   @Override
+                   public void onSuccess(Void aVoid) {
+                       System.out.println("plato actualizado");
+                   }
+               });
             }
         });
     }

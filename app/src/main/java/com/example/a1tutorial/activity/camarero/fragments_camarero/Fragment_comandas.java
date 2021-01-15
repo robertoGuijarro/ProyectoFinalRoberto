@@ -29,6 +29,7 @@ public class Fragment_comandas extends Fragment {
     RecyclerView listadoDeComandas;
     
     AdaptadorComandasListado adaptadorComandasListado;
+
     AuthProvider auth;
     
     public Fragment_comandas(){

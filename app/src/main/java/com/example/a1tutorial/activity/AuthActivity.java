@@ -52,6 +52,7 @@ public class AuthActivity extends AppCompatActivity {
         txtpass = findViewById(R.id.loginPassword);
 
         btnRegistrar = findViewById(R.id.loginRegistrerBtn);
+
         btnLogin = findViewById(R.id.loginButton);
 
         //rellenarCarta();
@@ -78,16 +79,11 @@ public class AuthActivity extends AppCompatActivity {
                                         System.out.println("Emails"+document.get("oficio"));
 
                                         if ("camarero".equals(document.getString("oficio"))){
-                                            FirebaseUser userCamarero = mauth.getCurrentUser();
-                                            System.out.println(userCamarero.getDisplayName());
-                                            Intent intentoCamarero = new Intent(AuthActivity.this, Fragment_camarero.class);
-                                            startActivity(intentoCamarero);
+                                            loginCamarero();
                                         }
 
                                         if ("cocinero".equals(document.getString("oficio"))){
-                                            FirebaseUser userCocinero = mauth.getCurrentUser();
-                                            Intent intentoCocinero = new Intent(AuthActivity.this, Fragment_cocinero.class);
-                                            startActivity(intentoCocinero);
+                                            loginCocinero();
                                         }
                                     }
                                 }
@@ -99,6 +95,16 @@ public class AuthActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void loginCocinero() {
+        Intent intentoCocinero = new Intent(AuthActivity.this, Fragment_cocinero.class);
+        startActivity(intentoCocinero);
+    }
+
+    private void loginCamarero() {
+        Intent intentoCamarero = new Intent(AuthActivity.this, Fragment_camarero.class);
+        startActivity(intentoCamarero);
     }
 
     private void rellenarCarta() {
@@ -138,11 +144,27 @@ public class AuthActivity extends AppCompatActivity {
 
     }
 
+
+
     @Override
     protected void onStart() {
         super.onStart();
+
         if (mauth.getCurrentUser()!=null){
-            //startActivity(new Intent(this, Fragment_camarero.class));
+            System.out.println(mauth.getCurrentUser().getEmail());
+            userDatabaseProvider.getOficio(mauth.getCurrentUser().getEmail()).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                @Override
+                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                    for (QueryDocumentSnapshot document:queryDocumentSnapshots){
+                        if ("camarero".equals(document.getString("oficio"))){
+                            loginCamarero();
+                        }
+                        if ("cocinero".equals(document.getString("oficio"))){
+                            loginCocinero();
+                        }
+                    }
+                }
+            });
         }
     }
 

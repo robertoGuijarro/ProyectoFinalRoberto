@@ -947,6 +947,9 @@ color colorPrimary
 color colorPrimaryDark
 color comandasEfectuadas
 color comandasPorHacer
+color comidaEnProceso
+color comidaEntregada
+color comidaHecha
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -1719,6 +1722,7 @@ id beginOnFirstDraw
 id beginning
 id blocking
 id bottom
+id botton_vavigation_barra
 id botton_vavigation_camarero
 id botton_vavigation_cocinero
 id bounce
@@ -1730,6 +1734,8 @@ id btn_carta_entrante
 id btn_carta_pescado
 id btn_carta_postre
 id btn_comanda_crear
+id btn_item_barra_prepararBebida
+id btn_item_camarero_comandas_entregarBebida
 id btn_item_cocinero_cocinarPlato
 id btn_item_comanda_bebidas_mas
 id btn_item_comanda_bebidas_menos
@@ -1741,6 +1747,7 @@ id buttonPanel
 id cache_measures
 id cancel_action
 id cancel_button
+id cardView_item_barra_comandas
 id cardView_item_camarero_comandas
 id cardView_item_cocinero_comandas
 id center
@@ -1818,6 +1825,7 @@ id flip
 id floating
 id forever
 id frame_container
+id frame_container_barra
 id frame_container_cocinero
 id ghost_view
 id ghost_view_holder
@@ -1845,6 +1853,7 @@ id item_carta_nombre
 id item_carta_precio
 id item_carta_tipo
 id item_listadoCocineroComandas
+id item_listadobarraComandas
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -1857,10 +1866,14 @@ id line1
 id line3
 id linear
 id linearLayout
+id linearLayout_item_camarero_comandas_bebidas
+id linearLayout_item_camarero_comandas_plato
 id listMode
 id list_item
+id listadoBarraComandas
 id listadoCamareroComandas
-id listadoCamareroComandasDesplegable
+id listadoCamareroComandasBebidasDesplegable
+id listadoCamareroComandasComidaDesplegable
 id listadoCocineroComandas
 id listado_carta_comanda
 id listadorCartaComida
@@ -1870,6 +1883,7 @@ id loginPassword
 id loginRegistrerBtn
 id masked
 id media_actions
+id menu_barra_comandas
 id menu_camarero_carta
 id menu_camarero_comanda
 id menu_camarero_comandas
@@ -2022,6 +2036,7 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id textView2
 id text_input_end_icon
 id text_input_start_icon
@@ -2055,8 +2070,14 @@ id txtPrueba5
 id txtPrueba6
 id txtPrueba7
 id txt_comanda_mesas
+id txt_item_barra_comanda_cantidad
+id txt_item_barra_comandas_nombreBebida
+id txt_item_barra_nombreCamarero
+id txt_item_barra_numeroMesa
 id txt_item_camarero_comandas_cantidad
+id txt_item_camarero_comandas_cantidadBebida
 id txt_item_camarero_comandas_mesa
+id txt_item_camarero_comandas_nombreBebida
 id txt_item_camarero_comandas_nombreCamarero
 id txt_item_camarero_comandas_nombrePlato
 id txt_item_cocinero_comandas_cantidad
@@ -2148,6 +2169,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_auth
+layout activity_barra_comandas
+layout activity_barra_fragment
 layout activity_camarero_carta
 layout activity_camarero_comanda
 layout activity_camarero_comandas
@@ -2172,8 +2195,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout item_barra_comandas
+layout item_barra_comandas_bebidas
 layout item_camarero_comanda_bebidas
 layout item_camarero_comandas
+layout item_camarero_comandas_bebidas
 layout item_camarero_comandas_platos
 layout item_carta
 layout item_cocinero_comandas
@@ -2240,6 +2266,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu botton_nav_barra
 menu botton_nav_camarero
 menu botton_nav_cocinero
 menu menu_cerrar_sesion

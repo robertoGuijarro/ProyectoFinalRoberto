@@ -1,15 +1,19 @@
 [
     {
-        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_camarero_carta.xml",
-        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_camarero_carta.xml"
-    },
-    {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_camarero_carta.xml",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_camarero_carta.xml"
+    },
+    {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_camarero_comandas.xml",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_camarero_comandas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_camarero_comandas_bebidas.xml",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_camarero_comandas_bebidas.xml"
     },
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_comanda_comida.xml",
@@ -36,8 +40,20 @@
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_cocinero_comandas_platos.xml"
     },
     {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_barra_comandas_bebidas.xml",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_barra_comandas_bebidas.xml"
+    },
+    {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_cocinero_comandas.xml",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_cocinero_comandas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_barra_comandas.xml",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_barra_comandas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_barra_fragment.xml",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_barra_fragment.xml"
     },
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_camarero_fragment.xml",
@@ -62,5 +78,9 @@
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_cocinero_comandas.xml",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_cocinero_comandas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_barra_comandas.xml",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_barra_comandas.xml"
     }
 ]

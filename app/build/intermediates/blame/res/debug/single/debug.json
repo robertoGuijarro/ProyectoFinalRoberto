@@ -24,6 +24,10 @@
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\menu\\botton_nav_camarero.xml"
     },
     {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_barra_comandas.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_barra_comandas.xml"
+    },
+    {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
@@ -34,6 +38,10 @@
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_barra_fragment.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_barra_fragment.xml"
     },
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_camarero_carta.xml.flat",
@@ -54,6 +62,10 @@
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_cocinero_comandas.xml.flat",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_cocinero_comandas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_barra_comandas.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_barra_comandas.xml"
     },
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_my_button_rounded.xml.flat",
@@ -84,6 +96,10 @@
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\activity_auth.xml"
     },
     {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_camarero_comandas_bebidas.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_camarero_comandas_bebidas.xml"
+    },
+    {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
@@ -110,6 +126,14 @@
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_keyboard_arrow_down_black_24dp.xml.flat",
         "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\drawable-v24\\ic_keyboard_arrow_down_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\menu_botton_nav_barra.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\menu\\botton_nav_barra.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_barra_comandas_bebidas.xml.flat",
+        "source": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\src\\main\\res\\layout\\item_barra_comandas_bebidas.xml"
     },
     {
         "merged": "C:\\Users\\Paula\\Documents\\AAProyectoAndroid\\RestauranteProyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_keyboard_arrow_up_black_24dp.xml.flat",

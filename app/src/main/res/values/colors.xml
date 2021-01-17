@@ -15,4 +15,8 @@
     //color comandas
     <color name="comandasEfectuadas">#67A9DA</color>
     <color name="comandasPorHacer">#E7A83C</color>
+
+    <color name="comidaEnProceso">#F15030</color>
+    <color name="comidaHecha">#E7A83C</color>
+    <color name="comidaEntregada">#67A9DA</color>
 </resources>

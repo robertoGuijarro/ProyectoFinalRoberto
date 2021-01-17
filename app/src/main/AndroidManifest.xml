@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activity.camarero.Fragment_camarero"/>
         <activity android:name=".activity.cocinero.Fragment_cocinero"/>
+        <activity android:name=".activity.barra.Fragment_barra"/>
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.AuthActivity">

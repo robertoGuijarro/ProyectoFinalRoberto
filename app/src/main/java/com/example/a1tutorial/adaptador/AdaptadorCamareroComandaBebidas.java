@@ -43,7 +43,7 @@ public class AdaptadorCamareroComandaBebidas extends FirestoreRecyclerAdapter<Be
         holder.txtStock.setText(""+ model.getStock());
         String idDocument=getSnapshots().getSnapshot(position).getId();
 
-        mydrinksSelected.add(new Bebidas(idDocument,model.getNombre(),model.getPrecio(),model.getUrl(),model.getStock(),model.getUnidades(),model.getEstado(),model.isAlcoholicas()));
+        mydrinksSelected.add(new Bebidas(idDocument,model.getNombre(),model.getPrecio(),model.getUrl(),model.getStock(),model.getUnidades(),"rojo",model.isAlcoholicas()));
 
         holder.btnMas.setOnClickListener(new View.OnClickListener() {
             @Override

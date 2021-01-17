@@ -30,6 +30,10 @@ public class ComandaDatabasePorvider {
         return mColection.document(document).collection("platos");
     }
 
+    public Query getComandasBebidas(String document){
+        return mColection.document(document).collection("bebidas");
+    }
+
     public Query getComandaPlatosCocinero(String document){
         return mColection.document(document).collection("platos").whereEqualTo("estado", "rojo");
     }
@@ -42,5 +46,23 @@ public class ComandaDatabasePorvider {
         return mColection.document(documentoComanda).collection("platos").document(documentPlato);
     }
 
+    public DocumentReference entregarComida (String documentoComanda, String documentPlato){
+        return mColection.document(documentoComanda).collection("platos").document(documentPlato);
+    }
+
+
+    public DocumentReference entregarBebida (String documetoComanda, String documentoBebida){
+        return mColection.document(documetoComanda).collection("bebidas").document(documentoBebida);
+    }
+    public Query getComandaBebidasBarra(String document){
+        return mColection.document(document).collection("bebidas").whereEqualTo("estado", "rojo");
+    }
+    public DocumentReference updateBebidaBarra (String documentComanda, String documentBebida){
+        return mColection.document(documentComanda).collection("bebidas").document(documentBebida);
+    }
+
+    public Query getComandaBebidas(){
+        return mColection.whereEqualTo("servido", false);
+    }
 }
  

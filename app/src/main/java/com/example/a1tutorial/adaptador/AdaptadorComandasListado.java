@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.a1tutorial.R;
+import com.example.a1tutorial.models.Bebidas;
 import com.example.a1tutorial.models.Carta;
 import com.example.a1tutorial.models.Comanda;
 import com.example.a1tutorial.providers.ComandaDatabasePorvider;
@@ -52,6 +53,8 @@ public class AdaptadorComandasListado extends FirestoreRecyclerAdapter<Comanda, 
 
         holder.listadoPlatos.setLayoutManager(new LinearLayoutManager(holder.itemView.getContext()));
 
+        holder.listadoBebidas.setLayoutManager(new LinearLayoutManager(holder.itemView.getContext()));
+
         holder.btnDesplegar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,7 +63,9 @@ public class AdaptadorComandasListado extends FirestoreRecyclerAdapter<Comanda, 
                     holder.desplegable.setVisibility(View.VISIBLE);
                     holder.btnDesplegar.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black_24dp);
 
-                    cargarCardView(comandaDatabasePorvider.getComandasPlatos(idDocument), holder.listadoPlatos);
+                    cargarCardView(comandaDatabasePorvider.getComandasPlatos(idDocument), holder.listadoPlatos, idDocument);
+
+                    cargarCardViewBebidas(comandaDatabasePorvider.getComandasBebidas(idDocument), holder.listadoBebidas, idDocument);
                 }else{
                     TransitionManager.beginDelayedTransition(holder.cardView, new AutoTransition());
                     holder.desplegable.setVisibility(View.GONE);
@@ -70,15 +75,26 @@ public class AdaptadorComandasListado extends FirestoreRecyclerAdapter<Comanda, 
         });
     }
 
-    public void cargarCardView(Query comandasPlatos, RecyclerView holder) {
+    private void cargarCardViewBebidas(Query comandasBebidas, RecyclerView listadoBebidas, String idDocument) {
+        AdaptadorCamareroComandasBebidas adaptadorCamareroComandasBebidas;
+
+        FirestoreRecyclerOptions<Bebidas> optionsBebidas = new FirestoreRecyclerOptions.Builder<Bebidas>().setQuery(comandasBebidas, Bebidas.class).build();
+        adaptadorCamareroComandasBebidas = new AdaptadorCamareroComandasBebidas(optionsBebidas, idDocument);
+
+        listadoBebidas.setAdapter(adaptadorCamareroComandasBebidas);
+        adaptadorCamareroComandasBebidas.startListening();
+    }
+
+    public void cargarCardView(Query comandasPlatos, RecyclerView holder, String idDocument) {
         AdaptadorCamareroComandasPlatos adaptadorCamareroComandasPlatos;
 
-
         FirestoreRecyclerOptions<Carta> options = new FirestoreRecyclerOptions.Builder<Carta>().setQuery(comandasPlatos, Carta.class).build();
-        adaptadorCamareroComandasPlatos = new AdaptadorCamareroComandasPlatos(options);
+        adaptadorCamareroComandasPlatos = new AdaptadorCamareroComandasPlatos(options, idDocument);
 
         holder.setAdapter(adaptadorCamareroComandasPlatos);
         adaptadorCamareroComandasPlatos.startListening();
+
+
     }
 
     @NonNull
@@ -96,7 +112,7 @@ public class AdaptadorComandasListado extends FirestoreRecyclerAdapter<Comanda, 
 
         CardView cardView;
 
-        RecyclerView listadoPlatos;
+        RecyclerView listadoPlatos, listadoBebidas;
         public ViewComandaComida(View vista) {
             super(vista);
             txtNombreCamarero = vista.findViewById(R.id.txt_item_camarero_comandas_nombreCamarero);
@@ -108,7 +124,9 @@ public class AdaptadorComandasListado extends FirestoreRecyclerAdapter<Comanda, 
 
             cardView = vista.findViewById(R.id.cardView_item_camarero_comandas);
 
-            listadoPlatos = vista.findViewById(R.id.listadoCamareroComandasDesplegable);
+            listadoPlatos = vista.findViewById(R.id.listadoCamareroComandasComidaDesplegable);
+
+            listadoBebidas = vista.findViewById(R.id.listadoCamareroComandasBebidasDesplegable);
         }
     }
 }

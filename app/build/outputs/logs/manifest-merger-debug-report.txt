@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-25:12
+ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [androidx.databinding:viewbinding:3.6.1] C:\Users\Paula\.gradle\caches\transforms-2\files-2.1\51687616d321c00b717f1022a3b971a3\jetified-viewbinding-3.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Paula\.gradle\caches\transforms-2\files-2.1\41264f9702b5b040fcc9d2d03a26c5bf\constraintlayout-2.0.2\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Paula\.gradle\caches\transforms-2\files-2.1\521e3995ba13e55257dc5a84d6fb468b\material-1.2.1\AndroidManifest.xml:17:1-24:12
@@ -72,25 +72,25 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Paula\.gradle\cache
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Paula\.gradle\caches\transforms-2\files-2.1\0919209da85b27b3531ad5e0d5a8a670\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] C:\Users\Paula\.gradle\caches\transforms-2\files-2.1\64d0468912a1ef38b5c91b2de25726e8\jetified-protolite-well-known-types-17.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Paula\.gradle\caches\transforms-2\files-2.1\2dcdaae57c4add9a34736fb872771a33\jetified-grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:5:5-23:19
+ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:5:5-24:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Paula\.gradle\caches\transforms-2\files-2.1\41264f9702b5b040fcc9d2d03a26c5bf\constraintlayout-2.0.2\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Paula\.gradle\caches\transforms-2\files-2.1\41264f9702b5b040fcc9d2d03a26c5bf\constraintlayout-2.0.2\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Paula\.gradle\caches\transforms-2\files-2.1\521e3995ba13e55257dc5a84d6fb468b\material-1.2.1\AndroidManifest.xml:22:5-20
@@ -161,28 +161,32 @@ activity#com.example.a1tutorial.activity.cocinero.Fragment_cocinero
 ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:13:9-72
 	android:name
 		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:13:19-70
+activity#com.example.a1tutorial.activity.barra.Fragment_barra
+ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:14:9-66
+	android:name
+		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:14:19-64
 activity#com.example.a1tutorial.activity.RegisterActivity
-ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:14:9-63
+ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:15:9-63
 	android:name
-		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:14:19-60
+		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:15:19-60
 activity#com.example.a1tutorial.activity.HomeActivity
-ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:15:9-59
-	android:name
-		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:15:19-56
-activity#com.example.a1tutorial.activity.AuthActivity
-ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:16:9-22:20
+ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:16:9-59
 	android:name
 		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:16:19-56
+activity#com.example.a1tutorial.activity.AuthActivity
+ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:17:9-23:20
+	android:name
+		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:17:19-56
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:17:13-21:29
+ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml:21:27-74
 uses-sdk
 INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Paula\Documents\AAProyectoAndroid\RestauranteProyecto\app\src\main\AndroidManifest.xml

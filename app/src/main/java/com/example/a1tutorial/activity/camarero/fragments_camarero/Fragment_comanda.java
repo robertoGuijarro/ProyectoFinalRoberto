@@ -56,6 +56,7 @@ public class Fragment_comanda extends Fragment implements View.OnClickListener, 
     RecyclerView listadoCartaComida;
     Button btnAñadir, btnComidas, btnBebidas;
     TextView txtNumeroMesa;
+
     private AdaptadorComandaComida adaptadorComandaComida;
     private AdaptadorCamareroComandaBebidas adaptadorCamareroComandaBebidas;
 

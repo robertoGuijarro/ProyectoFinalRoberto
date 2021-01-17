@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.a1tutorial.R;
+import com.example.a1tutorial.activity.barra.Fragment_barra;
 import com.example.a1tutorial.activity.camarero.Fragment_camarero;
 import com.example.a1tutorial.activity.cocinero.Fragment_cocinero;
 import com.example.a1tutorial.models.Bebidas;
@@ -86,6 +87,10 @@ public class AuthActivity extends AppCompatActivity {
                                         if ("cocinero".equals(document.getString("oficio"))){
                                             loginCocinero();
                                         }
+
+                                        if ("barra".equals(document.getString("oficio"))){
+                                            loginBarra();
+                                        }
                                     }
                                 }
                             });
@@ -96,6 +101,11 @@ public class AuthActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void loginBarra() {
+        Intent intentoBarra = new Intent(AuthActivity.this, Fragment_barra.class);
+        startActivity(intentoBarra);
     }
 
     private void loginCocinero() {
@@ -186,6 +196,9 @@ public class AuthActivity extends AppCompatActivity {
                         }
                         if ("cocinero".equals(document.getString("oficio"))){
                             loginCocinero();
+                        }
+                        if("barra".equals(document.getString("oficio"))){
+                            loginBarra();
                         }
                     }
                 }

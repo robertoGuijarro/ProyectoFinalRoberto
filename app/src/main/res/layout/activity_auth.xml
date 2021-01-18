@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".activity.AuthActivity">
 
     <LinearLayout
@@ -51,16 +52,22 @@
                 android:layout_width="78dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorAccent"
+                android:background="@drawable/my_button_rounded"
+                android:backgroundTint="@color/colorAccent"
                 android:text="Registrar"
                 android:textColor="@android:color/white" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="8dp" />
 
             <Button
                 android:id="@+id/loginButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/my_button_rounded"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:text="Login"
                 android:textColor="@android:color/white" />
         </LinearLayout>

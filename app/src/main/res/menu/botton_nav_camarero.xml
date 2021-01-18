@@ -17,9 +17,4 @@
         android:enabled="true"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="carta" />
-    <item
-        android:id="@+id/menu_camarero_mesas"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:enabled="true"
-        android:title="mesas" />
 </menu>

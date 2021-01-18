@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -20,34 +21,126 @@ public final class ActivityCamareroCartaBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final Button btnCartaCarne;
+  public final Button btnCamareroCartaBebidas;
 
   @NonNull
-  public final Button btnCartaCocido;
+  public final Button btnCamareroCartaCarne;
 
   @NonNull
-  public final Button btnCartaEntrante;
+  public final Button btnCamareroCartaCocidos;
 
   @NonNull
-  public final Button btnCartaPescado;
+  public final Button btnCamareroCartaEntrantes;
 
   @NonNull
-  public final Button btnCartaPostre;
+  public final Button btnCamareroCartaPescado;
 
   @NonNull
-  public final RecyclerView listadorCartaComida;
+  public final Button btnCamareroCartaPostre;
+
+  @NonNull
+  public final CoordinatorLayout coordinatorCamareroCartaBebidas;
+
+  @NonNull
+  public final CoordinatorLayout coordinatorCamareroCartaCarne;
+
+  @NonNull
+  public final CoordinatorLayout coordinatorCamareroCartaCocidos;
+
+  @NonNull
+  public final CoordinatorLayout coordinatorCamareroCartaEntrantes;
+
+  @NonNull
+  public final CoordinatorLayout coordinatorCamareroCartaPescado;
+
+  @NonNull
+  public final CoordinatorLayout coordinatorCamareroCartaPostre;
+
+  @NonNull
+  public final CoordinatorLayout coordinatorLayoutCarne;
+
+  @NonNull
+  public final RecyclerView listadoCamareroCartaDesplegableBebidas;
+
+  @NonNull
+  public final RecyclerView listadoCamareroCartaDesplegableCarne;
+
+  @NonNull
+  public final RecyclerView listadoCamareroCartaDesplegableCocidos;
+
+  @NonNull
+  public final RecyclerView listadoCamareroCartaDesplegableEntrantes;
+
+  @NonNull
+  public final RecyclerView listadoCamareroCartaDesplegablePescado;
+
+  @NonNull
+  public final RecyclerView listadoCamareroCartaDesplegablePostre;
+
+  @NonNull
+  public final TextView textCamareroCartaBebidas;
+
+  @NonNull
+  public final TextView textCamareroCartaCarne;
+
+  @NonNull
+  public final TextView textCamareroCartaCocidos;
+
+  @NonNull
+  public final TextView textCamareroCartaEntrantes;
+
+  @NonNull
+  public final TextView textCamareroCartaPescado;
+
+  @NonNull
+  public final TextView textCamareroCartaPostre;
 
   private ActivityCamareroCartaBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull Button btnCartaCarne, @NonNull Button btnCartaCocido,
-      @NonNull Button btnCartaEntrante, @NonNull Button btnCartaPescado,
-      @NonNull Button btnCartaPostre, @NonNull RecyclerView listadorCartaComida) {
+      @NonNull Button btnCamareroCartaBebidas, @NonNull Button btnCamareroCartaCarne,
+      @NonNull Button btnCamareroCartaCocidos, @NonNull Button btnCamareroCartaEntrantes,
+      @NonNull Button btnCamareroCartaPescado, @NonNull Button btnCamareroCartaPostre,
+      @NonNull CoordinatorLayout coordinatorCamareroCartaBebidas,
+      @NonNull CoordinatorLayout coordinatorCamareroCartaCarne,
+      @NonNull CoordinatorLayout coordinatorCamareroCartaCocidos,
+      @NonNull CoordinatorLayout coordinatorCamareroCartaEntrantes,
+      @NonNull CoordinatorLayout coordinatorCamareroCartaPescado,
+      @NonNull CoordinatorLayout coordinatorCamareroCartaPostre,
+      @NonNull CoordinatorLayout coordinatorLayoutCarne,
+      @NonNull RecyclerView listadoCamareroCartaDesplegableBebidas,
+      @NonNull RecyclerView listadoCamareroCartaDesplegableCarne,
+      @NonNull RecyclerView listadoCamareroCartaDesplegableCocidos,
+      @NonNull RecyclerView listadoCamareroCartaDesplegableEntrantes,
+      @NonNull RecyclerView listadoCamareroCartaDesplegablePescado,
+      @NonNull RecyclerView listadoCamareroCartaDesplegablePostre,
+      @NonNull TextView textCamareroCartaBebidas, @NonNull TextView textCamareroCartaCarne,
+      @NonNull TextView textCamareroCartaCocidos, @NonNull TextView textCamareroCartaEntrantes,
+      @NonNull TextView textCamareroCartaPescado, @NonNull TextView textCamareroCartaPostre) {
     this.rootView = rootView;
-    this.btnCartaCarne = btnCartaCarne;
-    this.btnCartaCocido = btnCartaCocido;
-    this.btnCartaEntrante = btnCartaEntrante;
-    this.btnCartaPescado = btnCartaPescado;
-    this.btnCartaPostre = btnCartaPostre;
-    this.listadorCartaComida = listadorCartaComida;
+    this.btnCamareroCartaBebidas = btnCamareroCartaBebidas;
+    this.btnCamareroCartaCarne = btnCamareroCartaCarne;
+    this.btnCamareroCartaCocidos = btnCamareroCartaCocidos;
+    this.btnCamareroCartaEntrantes = btnCamareroCartaEntrantes;
+    this.btnCamareroCartaPescado = btnCamareroCartaPescado;
+    this.btnCamareroCartaPostre = btnCamareroCartaPostre;
+    this.coordinatorCamareroCartaBebidas = coordinatorCamareroCartaBebidas;
+    this.coordinatorCamareroCartaCarne = coordinatorCamareroCartaCarne;
+    this.coordinatorCamareroCartaCocidos = coordinatorCamareroCartaCocidos;
+    this.coordinatorCamareroCartaEntrantes = coordinatorCamareroCartaEntrantes;
+    this.coordinatorCamareroCartaPescado = coordinatorCamareroCartaPescado;
+    this.coordinatorCamareroCartaPostre = coordinatorCamareroCartaPostre;
+    this.coordinatorLayoutCarne = coordinatorLayoutCarne;
+    this.listadoCamareroCartaDesplegableBebidas = listadoCamareroCartaDesplegableBebidas;
+    this.listadoCamareroCartaDesplegableCarne = listadoCamareroCartaDesplegableCarne;
+    this.listadoCamareroCartaDesplegableCocidos = listadoCamareroCartaDesplegableCocidos;
+    this.listadoCamareroCartaDesplegableEntrantes = listadoCamareroCartaDesplegableEntrantes;
+    this.listadoCamareroCartaDesplegablePescado = listadoCamareroCartaDesplegablePescado;
+    this.listadoCamareroCartaDesplegablePostre = listadoCamareroCartaDesplegablePostre;
+    this.textCamareroCartaBebidas = textCamareroCartaBebidas;
+    this.textCamareroCartaCarne = textCamareroCartaCarne;
+    this.textCamareroCartaCocidos = textCamareroCartaCocidos;
+    this.textCamareroCartaEntrantes = textCamareroCartaEntrantes;
+    this.textCamareroCartaPescado = textCamareroCartaPescado;
+    this.textCamareroCartaPostre = textCamareroCartaPostre;
   }
 
   @Override
@@ -77,38 +170,142 @@ public final class ActivityCamareroCartaBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     String missingId;
     missingId: {
-      Button btnCartaCarne = rootView.findViewById(R.id.btn_carta_carne);
-      if (btnCartaCarne == null) {
-        missingId = "btnCartaCarne";
+      Button btnCamareroCartaBebidas = rootView.findViewById(R.id.btn_camarero_carta_bebidas);
+      if (btnCamareroCartaBebidas == null) {
+        missingId = "btnCamareroCartaBebidas";
         break missingId;
       }
-      Button btnCartaCocido = rootView.findViewById(R.id.btn_carta_cocido);
-      if (btnCartaCocido == null) {
-        missingId = "btnCartaCocido";
+      Button btnCamareroCartaCarne = rootView.findViewById(R.id.btn_camarero_carta_Carne);
+      if (btnCamareroCartaCarne == null) {
+        missingId = "btnCamareroCartaCarne";
         break missingId;
       }
-      Button btnCartaEntrante = rootView.findViewById(R.id.btn_carta_entrante);
-      if (btnCartaEntrante == null) {
-        missingId = "btnCartaEntrante";
+      Button btnCamareroCartaCocidos = rootView.findViewById(R.id.btn_camarero_carta_cocidos);
+      if (btnCamareroCartaCocidos == null) {
+        missingId = "btnCamareroCartaCocidos";
         break missingId;
       }
-      Button btnCartaPescado = rootView.findViewById(R.id.btn_carta_pescado);
-      if (btnCartaPescado == null) {
-        missingId = "btnCartaPescado";
+      Button btnCamareroCartaEntrantes = rootView.findViewById(R.id.btn_camarero_carta_entrantes);
+      if (btnCamareroCartaEntrantes == null) {
+        missingId = "btnCamareroCartaEntrantes";
         break missingId;
       }
-      Button btnCartaPostre = rootView.findViewById(R.id.btn_carta_postre);
-      if (btnCartaPostre == null) {
-        missingId = "btnCartaPostre";
+      Button btnCamareroCartaPescado = rootView.findViewById(R.id.btn_camarero_carta_pescado);
+      if (btnCamareroCartaPescado == null) {
+        missingId = "btnCamareroCartaPescado";
         break missingId;
       }
-      RecyclerView listadorCartaComida = rootView.findViewById(R.id.listadorCartaComida);
-      if (listadorCartaComida == null) {
-        missingId = "listadorCartaComida";
+      Button btnCamareroCartaPostre = rootView.findViewById(R.id.btn_camarero_carta_postre);
+      if (btnCamareroCartaPostre == null) {
+        missingId = "btnCamareroCartaPostre";
         break missingId;
       }
-      return new ActivityCamareroCartaBinding((CoordinatorLayout) rootView, btnCartaCarne,
-          btnCartaCocido, btnCartaEntrante, btnCartaPescado, btnCartaPostre, listadorCartaComida);
+      CoordinatorLayout coordinatorCamareroCartaBebidas = rootView.findViewById(R.id.coordinator_camarero_carta_bebidas);
+      if (coordinatorCamareroCartaBebidas == null) {
+        missingId = "coordinatorCamareroCartaBebidas";
+        break missingId;
+      }
+      CoordinatorLayout coordinatorCamareroCartaCarne = rootView.findViewById(R.id.coordinator_camarero_carta_carne);
+      if (coordinatorCamareroCartaCarne == null) {
+        missingId = "coordinatorCamareroCartaCarne";
+        break missingId;
+      }
+      CoordinatorLayout coordinatorCamareroCartaCocidos = rootView.findViewById(R.id.coordinator_camarero_carta_cocidos);
+      if (coordinatorCamareroCartaCocidos == null) {
+        missingId = "coordinatorCamareroCartaCocidos";
+        break missingId;
+      }
+      CoordinatorLayout coordinatorCamareroCartaEntrantes = rootView.findViewById(R.id.coordinator_camarero_carta_entrantes);
+      if (coordinatorCamareroCartaEntrantes == null) {
+        missingId = "coordinatorCamareroCartaEntrantes";
+        break missingId;
+      }
+      CoordinatorLayout coordinatorCamareroCartaPescado = rootView.findViewById(R.id.coordinator_camarero_carta_pescado);
+      if (coordinatorCamareroCartaPescado == null) {
+        missingId = "coordinatorCamareroCartaPescado";
+        break missingId;
+      }
+      CoordinatorLayout coordinatorCamareroCartaPostre = rootView.findViewById(R.id.coordinator_camarero_carta_postre);
+      if (coordinatorCamareroCartaPostre == null) {
+        missingId = "coordinatorCamareroCartaPostre";
+        break missingId;
+      }
+      CoordinatorLayout coordinatorLayoutCarne = rootView.findViewById(R.id.coordinatorLayoutCarne);
+      if (coordinatorLayoutCarne == null) {
+        missingId = "coordinatorLayoutCarne";
+        break missingId;
+      }
+      RecyclerView listadoCamareroCartaDesplegableBebidas = rootView.findViewById(R.id.listadoCamareroCartaDesplegableBebidas);
+      if (listadoCamareroCartaDesplegableBebidas == null) {
+        missingId = "listadoCamareroCartaDesplegableBebidas";
+        break missingId;
+      }
+      RecyclerView listadoCamareroCartaDesplegableCarne = rootView.findViewById(R.id.listadoCamareroCartaDesplegableCarne);
+      if (listadoCamareroCartaDesplegableCarne == null) {
+        missingId = "listadoCamareroCartaDesplegableCarne";
+        break missingId;
+      }
+      RecyclerView listadoCamareroCartaDesplegableCocidos = rootView.findViewById(R.id.listadoCamareroCartaDesplegableCocidos);
+      if (listadoCamareroCartaDesplegableCocidos == null) {
+        missingId = "listadoCamareroCartaDesplegableCocidos";
+        break missingId;
+      }
+      RecyclerView listadoCamareroCartaDesplegableEntrantes = rootView.findViewById(R.id.listadoCamareroCartaDesplegable_entrantes);
+      if (listadoCamareroCartaDesplegableEntrantes == null) {
+        missingId = "listadoCamareroCartaDesplegableEntrantes";
+        break missingId;
+      }
+      RecyclerView listadoCamareroCartaDesplegablePescado = rootView.findViewById(R.id.listadoCamareroCartaDesplegablePescado);
+      if (listadoCamareroCartaDesplegablePescado == null) {
+        missingId = "listadoCamareroCartaDesplegablePescado";
+        break missingId;
+      }
+      RecyclerView listadoCamareroCartaDesplegablePostre = rootView.findViewById(R.id.listadoCamareroCartaDesplegablePostre);
+      if (listadoCamareroCartaDesplegablePostre == null) {
+        missingId = "listadoCamareroCartaDesplegablePostre";
+        break missingId;
+      }
+      TextView textCamareroCartaBebidas = rootView.findViewById(R.id.text_camarero_carta_bebidas);
+      if (textCamareroCartaBebidas == null) {
+        missingId = "textCamareroCartaBebidas";
+        break missingId;
+      }
+      TextView textCamareroCartaCarne = rootView.findViewById(R.id.text_camarero_carta_carne);
+      if (textCamareroCartaCarne == null) {
+        missingId = "textCamareroCartaCarne";
+        break missingId;
+      }
+      TextView textCamareroCartaCocidos = rootView.findViewById(R.id.text_camarero_carta_cocidos);
+      if (textCamareroCartaCocidos == null) {
+        missingId = "textCamareroCartaCocidos";
+        break missingId;
+      }
+      TextView textCamareroCartaEntrantes = rootView.findViewById(R.id.text_camarero_carta_entrantes);
+      if (textCamareroCartaEntrantes == null) {
+        missingId = "textCamareroCartaEntrantes";
+        break missingId;
+      }
+      TextView textCamareroCartaPescado = rootView.findViewById(R.id.text_camarero_carta_pescado);
+      if (textCamareroCartaPescado == null) {
+        missingId = "textCamareroCartaPescado";
+        break missingId;
+      }
+      TextView textCamareroCartaPostre = rootView.findViewById(R.id.text_camarero_carta_postre);
+      if (textCamareroCartaPostre == null) {
+        missingId = "textCamareroCartaPostre";
+        break missingId;
+      }
+      return new ActivityCamareroCartaBinding((CoordinatorLayout) rootView, btnCamareroCartaBebidas,
+          btnCamareroCartaCarne, btnCamareroCartaCocidos, btnCamareroCartaEntrantes,
+          btnCamareroCartaPescado, btnCamareroCartaPostre, coordinatorCamareroCartaBebidas,
+          coordinatorCamareroCartaCarne, coordinatorCamareroCartaCocidos,
+          coordinatorCamareroCartaEntrantes, coordinatorCamareroCartaPescado,
+          coordinatorCamareroCartaPostre, coordinatorLayoutCarne,
+          listadoCamareroCartaDesplegableBebidas, listadoCamareroCartaDesplegableCarne,
+          listadoCamareroCartaDesplegableCocidos, listadoCamareroCartaDesplegableEntrantes,
+          listadoCamareroCartaDesplegablePescado, listadoCamareroCartaDesplegablePostre,
+          textCamareroCartaBebidas, textCamareroCartaCarne, textCamareroCartaCocidos,
+          textCamareroCartaEntrantes, textCamareroCartaPescado, textCamareroCartaPostre);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

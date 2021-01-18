@@ -25,14 +25,14 @@ public final class ItemCartaBinding implements ViewBinding {
   public final TextView itemCartaPrecio;
 
   @NonNull
-  public final TextView itemCartaTipo;
+  public final TextView itemCartaStock;
 
   private ItemCartaBinding(@NonNull CardView rootView, @NonNull TextView itemCartaNombre,
-      @NonNull TextView itemCartaPrecio, @NonNull TextView itemCartaTipo) {
+      @NonNull TextView itemCartaPrecio, @NonNull TextView itemCartaStock) {
     this.rootView = rootView;
     this.itemCartaNombre = itemCartaNombre;
     this.itemCartaPrecio = itemCartaPrecio;
-    this.itemCartaTipo = itemCartaTipo;
+    this.itemCartaStock = itemCartaStock;
   }
 
   @Override
@@ -72,13 +72,13 @@ public final class ItemCartaBinding implements ViewBinding {
         missingId = "itemCartaPrecio";
         break missingId;
       }
-      TextView itemCartaTipo = rootView.findViewById(R.id.item_carta_tipo);
-      if (itemCartaTipo == null) {
-        missingId = "itemCartaTipo";
+      TextView itemCartaStock = rootView.findViewById(R.id.item_carta_stock);
+      if (itemCartaStock == null) {
+        missingId = "itemCartaStock";
         break missingId;
       }
       return new ItemCartaBinding((CardView) rootView, itemCartaNombre, itemCartaPrecio,
-          itemCartaTipo);
+          itemCartaStock);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

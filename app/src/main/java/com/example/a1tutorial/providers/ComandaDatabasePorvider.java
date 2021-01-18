@@ -23,7 +23,7 @@ public class ComandaDatabasePorvider {
     }
 
     public Query getComandasCamarero(String idCamarero){
-        return mColection.whereEqualTo("idCamarero", idCamarero);
+        return mColection.whereEqualTo("idCamarero", idCamarero).orderBy("mesa");
     }
 
     public Query getComandasPlatos(String document){
@@ -39,7 +39,7 @@ public class ComandaDatabasePorvider {
     }
 
     public Query getComandasSinCocinar(){
-        return mColection.whereEqualTo("servido", false);
+        return mColection.whereEqualTo("servido", false).orderBy("nameCamarero");
     }
 
     public DocumentReference updatePlatoCocinero(String documentoComanda, String documentPlato){
@@ -62,7 +62,7 @@ public class ComandaDatabasePorvider {
     }
 
     public Query getComandaBebidas(){
-        return mColection.whereEqualTo("servido", false);
+        return mColection.whereEqualTo("servido", false).orderBy("nameCamarero");
     }
 }
  

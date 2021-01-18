@@ -37,7 +37,7 @@ public class AdaptadorBarraComandas extends FirestoreRecyclerAdapter<Comanda, Ad
         final String idDocument =getSnapshots().getSnapshot(position).getId();
 
         holder.txtNombreCamarero.setText(model.getNameCamarero());
-        holder.txtNumeroMesa.setText(model.getMesa()+"");
+        holder.txtNumeroMesa.setText("Nº mesa:"+model.getMesa());
 
         holder.listadoComanda.setLayoutManager(new LinearLayoutManager(holder.itemView.getContext()));
 

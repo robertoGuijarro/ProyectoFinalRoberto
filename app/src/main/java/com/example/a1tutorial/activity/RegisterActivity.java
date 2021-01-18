@@ -12,7 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.a1tutorial.R;
+import com.example.a1tutorial.activity.barra.Fragment_barra;
 import com.example.a1tutorial.activity.camarero.Fragment_camarero;
+import com.example.a1tutorial.activity.cocinero.Fragment_cocinero;
 import com.example.a1tutorial.models.User;
 import com.example.a1tutorial.providers.AuthProvider;
 import com.example.a1tutorial.providers.UserDatabaseProvider;
@@ -79,9 +81,23 @@ public class RegisterActivity extends AppCompatActivity {
 
                     mUserProvider.getDatabase().document(authFirebase.idAuth()).set(userMap);
 
-                    Intent intento = new Intent(RegisterActivity.this, Fragment_camarero.class);
 
-                    startActivity(intento);
+                    if (oficio.equals("camarero")){
+                        Intent intento = new Intent(RegisterActivity.this, Fragment_camarero.class);
+                        startActivity(intento);
+                    }
+
+                    if (oficio.equals("cocinero")){
+                        Intent intento = new Intent(RegisterActivity.this, Fragment_cocinero.class);
+                        startActivity(intento);
+                    }
+
+                    if (oficio.equals("barra")){
+                        Intent intento = new Intent(RegisterActivity.this, Fragment_barra.class);
+                        startActivity(intento);
+                    }
+
+
                 }else{
                     Toast.makeText(RegisterActivity.this, "No se ha registrado correctamente ", Toast.LENGTH_SHORT).show();
                 }

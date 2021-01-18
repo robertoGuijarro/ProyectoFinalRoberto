@@ -4,8 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    >
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16sp"
+    android:backgroundTint="@color/colorFondoItems">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listadoCamareroComandas"
@@ -16,6 +19,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.385"
-        />
+        app:layout_constraintVertical_bias="0.385" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

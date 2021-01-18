@@ -37,7 +37,7 @@ public class AdaptadorBarraComandasBebidas extends FirestoreRecyclerAdapter<Bebi
     @Override
     protected void onBindViewHolder(@NonNull AdaptadorBarraComandasBebidas.ViewComandaBebida holder, int position, @NonNull Bebidas model) {
         holder.txtNombrePlato.setText(model.getNombre());
-        holder.txtCantidad.setText(model.getUnidades()+"");
+        holder.txtCantidad.setText("Cantidad"+model.getUnidades());
 
         final String idDocument =getSnapshots().getSnapshot(position).getId();
 

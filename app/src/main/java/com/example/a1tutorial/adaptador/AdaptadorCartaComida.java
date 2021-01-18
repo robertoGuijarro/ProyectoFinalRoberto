@@ -28,8 +28,8 @@ public class AdaptadorCartaComida extends FirestoreRecyclerAdapter<Carta, Adapta
     @Override
     protected void onBindViewHolder(@NonNull ViewHolderSuscesos holder, int position, @NonNull Carta model) {
         holder.txtNombre.setText(model.getNombre());
-        holder.txtPrecio.setText(""+model.getPrecio());
-        holder.txtTipo.setText(model.getTipo());
+        holder.txtPrecio.setText("Precio del plato: "+model.getPrecio()+"€");
+        holder.txtCantidad.setText("Stock"+model.getStock());
     }
 
     @NonNull
@@ -41,12 +41,12 @@ public class AdaptadorCartaComida extends FirestoreRecyclerAdapter<Carta, Adapta
 
 
     public class ViewHolderSuscesos extends RecyclerView.ViewHolder {
-        TextView txtNombre, txtPrecio, txtTipo;
+        TextView txtNombre, txtPrecio, txtCantidad;
         public ViewHolderSuscesos(@NonNull View itemView) {
             super(itemView);
             txtNombre= itemView.findViewById(R.id.item_carta_nombre);
             txtPrecio = itemView.findViewById(R.id.item_carta_precio);
-            txtTipo = itemView.findViewById(R.id.item_carta_tipo);
+            txtCantidad = itemView.findViewById(R.id.item_carta_stock);
         }
     }
 }

@@ -18,6 +18,7 @@ import com.example.a1tutorial.models.Bebidas;
 import com.example.a1tutorial.models.Carta;
 import com.example.a1tutorial.providers.UserDatabaseProvider;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -73,6 +74,8 @@ public class AuthActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull final Task<AuthResult> task) {
                         if (task.isSuccessful()){
+
+                            //rellenarCarta();
 
                             userDatabaseProvider.getOficio(txtEmail.getText().toString()).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                                 @Override
@@ -147,6 +150,11 @@ public class AuthActivity extends AppCompatActivity {
             FirebaseFirestore.getInstance().collection("Carta").add(cartas).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                 @Override
                 public void onSuccess(DocumentReference documentReference) {
+
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
 
                 }
             });

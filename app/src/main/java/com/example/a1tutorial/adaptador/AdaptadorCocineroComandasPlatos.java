@@ -39,7 +39,7 @@ public class AdaptadorCocineroComandasPlatos extends FirestoreRecyclerAdapter<Ca
     @Override
     protected void onBindViewHolder(@NonNull AdaptadorCocineroComandasPlatos.ViewComandaPlatos holder, int position, @NonNull Carta model) {
         holder.txtNombrePlato.setText(model.getNombre());
-        holder.txtCantidad.setText(model.getUnidades()+"");
+        holder.txtCantidad.setText("Cantidad"+model.getUnidades());
 
         final String idDocument =getSnapshots().getSnapshot(position).getId();
 
